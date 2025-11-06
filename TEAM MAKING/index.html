@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Collab Link - Team Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --glass: rgba(255,255,255,.6); --shadow: 0 12px 30px rgba(0,0,0,.08); }
+    *{box-sizing:border-box} body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:linear-gradient(120deg,#eff6ff,#f0fff4)}
+    .container{max-width:980px;margin:40px auto;padding:0 16px}
+    .header{text-align:center;margin-bottom:24px}
+    .title{margin:0;font-size:2.2rem;font-weight:800;letter-spacing:.5px}
+    .subtitle{margin:6px 0 0;color:#64748b;font-weight:500}
+    .glass-card{background:var(--glass);border-radius:16px;padding:18px;box-shadow:var(--shadow);backdrop-filter:blur(10px);margin:18px 0}
+    .section-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+    .section-header h2{margin:0;font-size:1.25rem}
+    .section-line{flex:1;height:1px;background:#e2e8f0}
+    .form-group{display:grid;gap:10px}
+    .input-field{width:100%;padding:12px 14px;border:1px solid #e5e7eb;border-radius:12px;background:#fff}
+    .textarea-field{min-height:80px;resize:vertical}
+    .btn-primary{padding:12px 14px;border:0;border-radius:12px;background:#10b981;color:#fff;font-weight:600;cursor:pointer}
+    .card-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+    .card{background:#fff;border-radius:14px;padding:14px;border:1px solid #eef2f7}
+    .card-header{display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .card-title{font-weight:700}
+    .card-subtitle{font-size:.9rem;color:#6b7280}
+    .btn-danger,.btn-ghost{border:0;border-radius:10px;padding:8px 10px;cursor:pointer}
+    .btn-danger{background:#ef4444;color:#fff}
+    .btn-ghost{background:#f3f4f6}
+    .search-wrapper{display:flex;gap:10px}
+    .search-input{padding:12px 14px}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="title">Collab Link</h1>
+      <p class="subtitle">Connect • Collaborate • Create</p>
+    </div>
+
+    <section id="event-section" class="glass-card">
+      <div class="section-header">
+        <h2>📅 Create Event</h2><div class="section-line"></div>
+      </div>
+      <div class="form-group">
+        <input id="eventName" placeholder="Event Name" class="input-field">
+        <input id="eventDate" type="date" class="input-field">
+        <textarea id="eventDesc" placeholder="Event Description" class="input-field textarea-field"></textarea>
+        <button onclick="addEvent()" class="btn-primary">✨ Add Event</button>
+      </div>
+      <ul id="eventList" class="card-list"></ul>
+    </section>
+
+    <section id="team-section" class="glass-card">
+      <div class="section-header">
+        <h2>👥 Create Team Post</h2><div class="section-line"></div>
+      </div>
+      <div class="form-group">
+        <select id="eventSelect" class="input-field"></select>
+        <input id="teamName" placeholder="Team Name" class="input-field">
+        <textarea id="requirements" placeholder="Requirements (skills, members needed, etc.)" class="input-field textarea-field"></textarea>
+        <button onclick="addTeam()" class="btn-primary">🚀 Add Team</button>
+      </div>
+    </section>
+
+    <section id="filter-section" class="glass-card">
+      <div class="section-header">
+        <h2>🔍 Find Teams</h2><div class="section-line"></div>
+      </div>
+      <div class="search-wrapper">
+        <input id="searchBar" placeholder="🔎 Search by event name, team name, or skills..." oninput="filterTeams()" class="input-field search-input">
+      </div>
+      <ul id="teamList" class="card-list"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
