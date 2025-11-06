@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JiitCafe - Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+    <div id="toast" class="fixed bottom-[-100px] left-1/2 -translate-x-1/2 p-3 px-6 bg-green-600 text-white rounded-full font-medium shadow-lg transition-all duration-500 ease-in-out z-50">
+        Item added to cart!
+    </div>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <a href="index.html" class="text-2xl font-bold text-yellow-900">
+                JiitCafe
+            </a>
+            <a href="cart.html" class="relative text-gray-600 hover:text-yellow-800">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <span id="cart-badge" class="absolute -top-2 -right-3 bg-red-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
+            </a>
+        </nav>
+    </header>
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">Our Menu</h1>
+        <div id="menu-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <p class="text-gray-500">Loading menu...</p>
+        </div>
+    </main>
+    <script src="js/cart-logic.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>

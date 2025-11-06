@@ -1,0 +1,15 @@
+{
+  "name": "jiit-cafe-server",
+  "version": "1.0.0",
+  "description": "Backend server for the JiitCafe ordering system.",
+  "main": "cafe-server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node cafe-server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
