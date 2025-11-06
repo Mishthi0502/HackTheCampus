@@ -1,0 +1,9 @@
+# Node.js / server projects
+node_modules/
+.env
+.DS_Store
+.vscode/
+npm-debug.log
+dist/
+build/
+database.db

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Issue Reporting</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Campus Issue Reporting System</h1>
+  <form id="issueForm">
+  <label>Student Name:</label>
+  <input type="text" name="studentName" required> 
+
+  <label>Email:</label>
+  <input type="email" name="studentEmail" required>
+
+  <label>Roll No:</label>
+  <input type="text" name="studentRollNo" required>
+
+  <label>Location (class, lab, etc.):</label>
+  <input type="text" name="location" required>
+
+  <label>Category (e.g., Maintenance, IT, Admin):</label>
+  <input type="text" name="category" required>
+
+  <label>Issue Title:</label>
+  <input type="text" name="title" required>
+
+  <label>Issue Description:</label>
+  <textarea name="description" rows="4" required></textarea>
+
+  <button type="submit">Submit Issue</button>
+</form>
+
+  <p id="message"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
