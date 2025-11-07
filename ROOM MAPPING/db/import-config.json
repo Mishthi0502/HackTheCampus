@@ -1,0 +1,10 @@
+{
+  "table": "rooms",
+  "roomCol": "Room_No",
+  "labels": {
+    "Room_No": "Room No",
+    "Floor": "Floor",
+    "Building": "Building"
+  },
+  "sheetName": "Lecture and Tutorial Room"
+}

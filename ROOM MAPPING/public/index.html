@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Room Lookup</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 24px; }
+    h1 { margin-bottom: 8px; }
+    form, .quick { display: grid; gap: 8px; max-width: 520px; }
+    input[type="text"] { padding: 10px; border: 1px solid #ccc; border-radius: 8px; }
+    button { padding: 10px 14px; border: 0; border-radius: 8px; cursor: pointer; }
+    button { background: #222; color: #fff; }
+    .err { color: #b00020; margin-top: 6px; min-height: 20px; }
+    .card { margin-top: 16px; border: 1px solid #e5e5e5; border-radius: 12px; padding: 16px; max-width: 520px; }
+    .hidden { display: none; }
+    dl { display: grid; grid-template-columns: 160px 1fr; gap: 8px 16px; }
+    dt { font-weight: 600; }
+    dd { margin: 0; }
+    #list { margin-top: 8px; display: grid; gap: 6px; max-width: 520px; }
+    .row { border: 1px solid #eee; border-radius: 10px; padding: 10px; display: grid; grid-template-columns: 180px 1fr; gap: 8px; cursor: pointer; }
+    .row:hover { background: #fafafa; }
+    .k { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <h1>Room Lookup</h1>
+
+  <div class="quick">
+    <input id="quick" type="text" placeholder="Type to search (e.g., G-1, C-204)..." />
+    <div id="list"></div>
+  </div>
+
+  <hr style="margin: 24px 0;" />
+
+  <form id="search-form">
+    <input id="room" type="text" placeholder="Enter exact Room No (e.g., G-1)" />
+    <button type="submit">Find Room</button>
+    <div id="err" class="err"></div>
+  </form>
+
+  <div id="card" class="card hidden"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
