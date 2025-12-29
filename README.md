@@ -1,4 +1,4 @@
-## 👥 Team & Hackathon Info
+##  Group Project
 
 This project was developed by a team of three:
 - Anushka Garg
